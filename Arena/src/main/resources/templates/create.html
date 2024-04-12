@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Torneio do Poder</title>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <h1>Cadastro de novas arenas!</h1>
+        
+        <form action="#" 
+	        method="post" 
+	        th:action="@{/cadastro}" 
+	        th:object="${model}">
+        	
+        	<input placeholder="Nome da Arena"
+        			id="nome"
+        			th:field = "*{nome}" />
+        			
+        	<input placeholder="Bioma"
+        			id="bioma"
+        			th:field = "*{bioma}" />
+        			
+        	<input placeholder="Multiplicador"
+        			id="multiplicador"
+        			type="number"
+	       			th:field = "*{multiplicador}" />
+	       			
+        	<input placeholder="Localização"
+        			id="localizacao"
+	       			th:field = "*{localizacao}" />
+	       			
+	       	<br>
+        	<input type="submit" value="Salvar"/>
+        
+        </form>
+        
+    </body>
+    
+</html>
